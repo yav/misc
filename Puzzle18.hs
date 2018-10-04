@@ -186,7 +186,7 @@ runProgs s1 s2 =
     Nothing ->
       case tryStep s2 s1 of
         Nothing -> (s1,s2)
-        Just (s2',s1') -> runProgs s2' s1'
+        Just (s2',s1') -> runProgs s1' s2'
     Just (s1',s2') -> runProgs s2' s1'
   where
   tryStep s other =
